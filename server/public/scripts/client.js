@@ -13,5 +13,10 @@ function readyNow() {
 }
 
 function showQuotes(response) {
-    console.log(response);
+    for(let i = 0; i < response.length; i++) {
+        let quoteText = response[i].text;
+        let quoteAuthor = response[i].author;
+        let quoteString = `<li>\"${quoteText}\" — ${quoteAuthor}</li>`
+        $('#quotesList').append(quoteString);
+    }
 }
