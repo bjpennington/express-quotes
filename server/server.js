@@ -18,6 +18,7 @@ app.get('/quotes', function(req, res) {
 app.post('/quotes', function (req, res) {
     console.log(req.body);
     quotes.push(req.body);
+    res.sendStatus(201);
 });
 
 app.listen(PORT, function () {
