@@ -1,9 +1,6 @@
-console.log('js');
-
 $(readyNow);
 
 function readyNow() {
-    console.log('jq');
     $('#quoteBtn').on('click', addQuote);
     getQuotes();
 }
@@ -18,6 +15,8 @@ function getQuotes() {
 }
 
 function showQuotes(response) {
+    $('#quoteText').val('');
+    $('#quoteAuthor').val('');
     $('#quotesList').empty();
     for(let i = 0; i < response.length; i++) {
         let quoteText = response[i].text;
@@ -39,7 +38,6 @@ function addQuote() {
             author : quoteAuthor
         }
     }).done(function (response) {
-        console.log(response);
         getQuotes();
     }).fail(function(errRes) {
         alert('Request failed. Error: ' + errRes);

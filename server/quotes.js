@@ -18,5 +18,3 @@ addQuote('Ya alright.', 'Tho Kieu');
 
 module.exports = quotes;
 
-console.log(quotes);
-
