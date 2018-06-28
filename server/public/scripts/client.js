@@ -18,6 +18,7 @@ function getQuotes() {
 }
 
 function showQuotes(response) {
+    $('#quotesList').empty();
     for(let i = 0; i < response.length; i++) {
         let quoteText = response[i].text;
         let quoteAuthor = response[i].author;
