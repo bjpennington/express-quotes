@@ -4,6 +4,10 @@ $(readyNow);
 
 function readyNow() {
     console.log('jq');
+    getQuotes();
+}
+
+function getQuotes() {
     $.ajax({
         url: '/quotes',
         method: 'GET'
