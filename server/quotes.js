@@ -17,3 +17,6 @@ addQuote('Separate the whites and the colors? What are you, some kind of laundry
 addQuote('Ya alright.', 'Tho Kieu');
 
 module.exports = quotes;
+
+console.log(quotes);
+

@@ -39,6 +39,7 @@ function addQuote() {
         }
     }).done(function (response) {
         console.log(response);
+        getQuotes();
     }).fail(function(errRes) {
         alert('Request failed. Error: ' + errRes);
     })
